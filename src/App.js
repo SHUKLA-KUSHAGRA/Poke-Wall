@@ -23,12 +23,10 @@ function App() {
   
   return (
     <>
-      <h1 className="text-center">Pokemon Wall</h1>
-      <ol>
+      <h1 className="text-center p-3">Pokemon Wall</h1>
       {names.map((val,idx)=>{
         return <Card key={idx} id={idx} name={val}/>
       })}
-      </ol>
     </>
   );
 }
