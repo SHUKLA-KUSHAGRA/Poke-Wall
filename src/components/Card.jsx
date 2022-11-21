@@ -5,12 +5,12 @@ function Card(props){
 
     return(
         <div className="container-fluid cards">
-            <div class="card">
+            <div className="card">
                 <img src={`https://img.pokemondb.net/artwork/large/${props.name}.jpg`}
-                onError={(e)=>{e.target.onerror = null; e.target.src="https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"}}
+                onError={(event)=>{event.target.onerror = null; event.target.src="https://upload.wikimedia.org/wikipedia/commons/3/39/Pokeball.PNG"}}
                  className="card-img-top img" alt="pokemon" />
-            <div class="card-body">
-                <h5 class="card-title text-center m-5">{props.name}</h5>
+            <div className="card-body">
+                <h3 className="card-title text-center m-5 text-capitalize text-danger">{props.name}</h3>
             </div>
             </div>
         </div>
