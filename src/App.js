@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import Card from './components/Card';
 
-const url="https://pokeapi.co/api/v2/pokemon?limit=800";
+const url="https://pokeapi.co/api/v2/pokemon?limit=1154";
 
 function App() {
 
@@ -20,20 +21,12 @@ function App() {
       getDataFromApi();
   },[]);
   
-  async function getImage(event){
-    const x = parseInt(event.target.id);
-    const imgurl = `https://pokeapi.co/api/v2/pokemon/${x+1}`;
-    const api = await axios.get(imgurl);
-    const data = api.data.sprites.front_default;
-    window.open(data);
-  }
-
   return (
     <>
-      <h1>Pokedex</h1>
+      <h1 className="text-center">Pokemon Wall</h1>
       <ol>
       {names.map((val,idx)=>{
-        return <li key={idx} id={idx} onClick={getImage}>{val}</li>
+        return <Card key={idx} id={idx} name={val}/>
       })}
       </ol>
     </>

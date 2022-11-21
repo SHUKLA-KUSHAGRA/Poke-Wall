@@ -1,0 +1,21 @@
+.card{
+    display: flex;
+    max-width: 300px;
+    box-shadow: 2px 8px 8px 2px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 10px;
+}
+.cards{
+    display: flex;
+    float: left;
+    justify-content: center;
+    margin: 50px;
+    width: fit-content;
+    height: 475px;
+    border-radius: 50px;
+    background-color: aliceblue;
+}
+.img{
+    width: 300px;
+    height: 300px;
+}
